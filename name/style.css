@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.name{
+    height: 100vh;
+    background: #2d2626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+h1{
+   color: aliceblue;
+    border-bottom: solid #58f1f1;
+    border-top: solid #58f1f1;
+    border-radius: 5em;
+    padding: 2em;
+    position: relative;
+    font-family: cursive;
+    background: black;
+    box-shadow: 2px 2px 1em #484646;
+}
+h1:hover{
+    /*background: #1a92f5;*/
+    box-shadow: 2px 2px 3em #1a92f5;
+    animation: shadow alternate infinite 3s;
+}
+@keyframes shadow {
+    0%{
+        box-shadow: 2px 2px 0.1em #1a92f5;
+    }
+    100%{
+        box-shadow: 2px 2px 5em #1a92f5;
+    }
+
+}
+h1 span:nth-child(1){
+    color: red;
+}
+h1 span:nth-child(2){
+    color: #c733b2;
+
+}
+h1 span:nth-child(2){
+    animation: keitimas linear infinite 2s;
+    animation-delay: 2s;
+}
+@keyframes keitimas {
+    0%{
+        color: #58f1f1;
+    }
+    100%{
+        color: chartreuse;
+    }
+
+}
+h1 span:nth-child(3){
+    animation: name-2 linear infinite 2s;
+    animation-delay: 2s;
+    animation-direction: alternate;
+}
+@keyframes name-2 {
+     0%{
+         color: #58f1f1;
+     }
+    50%{
+        color: greenyellow;
+    }
+     100%{
+         color: #c733b2;
+     }
+
+ }
+h1 span:nth-child(1){
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    width: 50%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#58f1f1);
+    box-shadow: 2px 2px 5em #1a92f5;
+    animation: toright linear infinite 2s;
+}
+@keyframes toright {
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 1%;
+        opacity: 0;
+    }
+}
+
+h1 span:nth-child(4){
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -100%;
+    width: 50%;
+    height: 2px;
+    transform: rotate(180deg);
+    background: linear-gradient(90deg, transparent,#58f1f1);
+    -webkit-box-shadow: 2px 2px 5em #1a92f5;
+    animation: toleft linear infinite 2s;
+}
+@keyframes toleft {
+    0%{
+        right: -100%;
+    }
+    100%{
+        right: 1%;
+        opacity: 0;
+    }
+}
